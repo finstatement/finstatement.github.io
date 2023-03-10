@@ -5,7 +5,7 @@ import { submitHandler } from "../util.js";
 
 
 const createTemplate = (onSubmit) => html`
-<h2>Create Statement</h2>
+<h2 class="heading">Create Statement</h2>
 <form @submit=${onSubmit}>
     <label>Profession: <input type="text" name="profession"></label>
     <label>Salary: <input type="number" name="salary"></label>

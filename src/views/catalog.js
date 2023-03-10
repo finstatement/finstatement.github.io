@@ -4,7 +4,7 @@ import { repeat } from '../lib/directives/repeat.js'
 import * as statementService from "../data/statement.js";
 
 const catalogTemplate = (list) => html`
-<h1 class="heading">Statements</h1>
+<h2 class="heading">Statements</h2>
 ${list}
 `;
 
