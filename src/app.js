@@ -9,6 +9,7 @@ import { createView } from './views/create.js';
 import { addSession } from './middlewares/session.js';
 import { getUserData } from './util.js';
 import { catalogView } from './views/catalog.js';
+import { loginView } from './views/login.js';
 
 
 window.api = api;
@@ -48,5 +49,6 @@ page('/', '/create');
 page('/statements', catalogView);
 page('/statements/:id', ({params: {id}}) => console.log('details', id));
 page('/create', createView);
+page('/login', loginView);
 
 page.start();
