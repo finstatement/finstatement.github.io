@@ -8,7 +8,7 @@ const catalogTemplate = (list) => html`
 ${list}
 `;
 
-const ListTemplate = (statements) => html`
+const listTemplate = (statements) => html`
 <section>
     ${repeat(statements, r => r.objectId, statementCard)}
 </section>`;
@@ -23,7 +23,7 @@ const statementCard = (statement) => html`
 export async function catalogView(ctx) {
     ctx.render(catalogTemplate(html`<p>Loading &hellip;</p>`));
 
-    const statements = await statementService.getAll();
+    const { results: statements } = await statementService.getAll();
 
     ctx.render(catalogTemplate(listTemplate(statements)));
 };
