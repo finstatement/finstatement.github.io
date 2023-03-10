@@ -1,4 +1,6 @@
+import { login } from "../data/user.js";
 import { html } from "../lib/lit-html.js";
+import { submitHandler } from "../util.js";
 
 const loginTemplate = (onSubmit) => html`
 <h2 class="heading">Login</h2>
@@ -9,4 +11,15 @@ const loginTemplate = (onSubmit) => html`
     </form>
 `;
 
-const login
+export function loginView(ctx) {
+    ctx.render(loginTemplate(submitHandler(onLogin)));
+
+    async function onLogin({ email, password }) {
+        if (email == '' || password == '') {
+            return alert('All fields are required!')
+        };
+
+        await login({ email, password });
+        ctx.page.redirect('/statements');
+    }
+} 
