@@ -2,7 +2,7 @@ import { html, render } from "../lib/lit-html.js";
 // import { logout } from "../api/user.js";
 
 {/* <a id="logo" href="/"><img id="logo-img" src="./images/logo.png" alt="" /></a> */}
-
+{/* <a @click=${onLogout} href="javascript:void(0)">Logout</a> */}
 export const navTemplate = (hasUser) => html`
 
 <nav>
@@ -13,7 +13,7 @@ export const navTemplate = (hasUser) => html`
 
 ${hasUser ? html`  <div class="user">
     <a href="/create">Add Statement</a>
-    <!-- <a @click=${onLogout} href="javascript:void(0)">Logout</a> -->
+
   </div>` :
 html`  <div class="guest">
     <a href="/login">Login</a>

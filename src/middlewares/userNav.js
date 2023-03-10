@@ -1,10 +1,10 @@
 export function addUserNav(navTemplate) {
-    let hasUser = false;
+    let hasUser = null;
 
     return function (ctx, next) {
-        if (Boolean(ctx.user) != hasUser) {
+        if (Boolean(ctx.user) !== hasUser) {
             hasUser = Boolean(ctx.user);
-            ctx.renderNav(navTemplate());
+            ctx.renderNav(navTemplate(hasUser));
         }
 
         next();
