@@ -6,13 +6,13 @@ body {
 .statement-card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.5rem;
     width: 25vw;
     border-radius: 1rem;
     margin: 1rem;
-    padding: 0 0.25rem;
+    padding: 0 0.75rem;
     background-color: lightcyan;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 }
