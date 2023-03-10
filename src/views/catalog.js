@@ -14,7 +14,7 @@ const listTemplate = (statements) => html`
 </section>`;
 
 const statementCard = (statement) => html`
-<article>
+<article class="statement-card">
     <p>${statement.profession}</p>
     <p>${statement.salary}</p>
     <p>${statement.passive}</p>
