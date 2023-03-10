@@ -18,10 +18,10 @@ export function createView(ctx) {
     ctx.render(createTemplate(submitHandler(onSubmit)));
 
     async function onSubmit({profession, salary, passive}) {
-        salary = Number(salary);
-        passive = Number(passive);
+        salary = parseInt(salary);
+        passive = parseInt(passive);
 
-        if (profession == "" || salary == "" || Number.isNaN(salary)) {
+        if (profession == "" || Number.isNaN(salary) || Number.isNaN(passive)) {
             return alert('All fields are required');
         }
 
