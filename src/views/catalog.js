@@ -8,18 +8,22 @@ const catalogTemplate = (list) => html`
 ${list}
 `;
 
-const ListTemplate = (rooms) => html`
+const ListTemplate = (statements) => html`
 <section>
-    ${repeat(rooms, r => r.objectId, roomCard)}
+    ${repeat(statements, r => r.objectId, statementCard)}
 </section>`;
 
-const roomCard = (room) => html`
-`;
+const statementCard = (statement) => html`
+<article>
+    <p>${statement.profession}</p>
+    <p>${statement.salary}</p>
+    <p>${statement.passive}</p>
+</article>`;
 
 export async function catalogView(ctx) {
-    ctx.render(html`<p>Loading &hellip;</p>`);
+    ctx.render(catalogTemplate(html`<p>Loading &hellip;</p>`));
 
-    const rooms = await roomService.getAll();
+    const statements = await statementService.getAll();
 
-    ctx.render(listTemplate(rooms));
+    ctx.render(catalogTemplate(listTemplate(statements)));
 };
