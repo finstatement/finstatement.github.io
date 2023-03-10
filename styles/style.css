@@ -1,0 +1,13 @@
+body {
+    width: 100vw;
+    background-color: lightblue;
+}
+
+.statement-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
