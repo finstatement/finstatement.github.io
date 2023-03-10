@@ -7,6 +7,7 @@ import { addSession } from './middlewares/session.js';
 import { getUserData } from './util.js';
 import { catalogView } from './views/catalog.js';
 import { loginView } from './views/login.js';
+import { registerView } from './views/register.js';
 
 const strings = {
     BG: {
@@ -42,5 +43,6 @@ page('/statements', catalogView);
 page('/statements/:id', ({params: {id}}) => console.log('details', id));
 page('/create', createView);
 page('/login', loginView);
+page('/register', registerView);
 
 page.start();

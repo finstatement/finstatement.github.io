@@ -7,6 +7,9 @@ h2.heading{
     text-align: center;
 }
 
+label {
+    display: block;
+}
 
 /* Catalog */
     /* Catalog List */
