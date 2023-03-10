@@ -45,8 +45,8 @@ page(addRender(document.querySelector('main')));
 page(addSession(getUserData));
 
 page('/', '/create');
-page('/statement', catalogView);
-page('/statement/:id', ({params: {id}}) => console.log('details', id));
+page('/statements', catalogView);
+page('/statements/:id', ({params: {id}}) => console.log('details', id));
 page('/create', createView);
 
 page.start();
