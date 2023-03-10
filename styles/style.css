@@ -3,6 +3,14 @@ body {
     background-color: lightblue;
 }
 
+h1.heading{
+    text-align: center;
+}
+
+
+/* Catalog */
+
+    /* Catalog Article */
 article.statement-card {
     display: inline-block;
 }
@@ -11,9 +19,9 @@ article.statement-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap:  wrap;
     gap: 0.5rem;
-    width: 30vw;
+    width: 90vw;
     border-radius: 1rem;
     margin: 1rem;
     padding: 0.5rem 1.25rem;
