@@ -1,20 +1,12 @@
 import page from './lib/page.mjs';
 import { render, html } from "./lib/lit-html.js";
 import { until } from "./lib/directives/until.js";
-import * as api from "./data/user.js";
-import * as request from './data/api.js';
-import * as statement from './data/statement.js';
 import { addRender } from './middlewares/render.js';
 import { createView } from './views/create.js';
 import { addSession } from './middlewares/session.js';
 import { getUserData } from './util.js';
 import { catalogView } from './views/catalog.js';
 import { loginView } from './views/login.js';
-
-
-window.api = api;
-window.request = request;
-window.statement = statement;
 
 const strings = {
     BG: {
