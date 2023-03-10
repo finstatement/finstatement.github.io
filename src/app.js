@@ -8,6 +8,8 @@ import { getUserData } from './util.js';
 import { catalogView } from './views/catalog.js';
 import { loginView } from './views/login.js';
 import { registerView } from './views/register.js';
+import { addUserNav } from './middlewares/userNav.js';
+import { navTemplate } from './views/nav.js';
 
 const strings = {
     BG: {
@@ -35,8 +37,9 @@ function home() {
 
 // Функция майка на Context Decorator, която 
 // може да носи общите неща в себе си!
-page(addRender(document.querySelector('main')));
+page(addRender(document.querySelector('main'), document.querySelector('header')));
 page(addSession(getUserData));
+page(addUserNav(navTemplate));
 
 page('/', '/create');
 page('/statements', catalogView);
