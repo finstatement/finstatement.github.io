@@ -9,7 +9,7 @@ ${list}
 `;
 
 const listTemplate = (statements) => html`
-<section>
+<section class="statement-list">
     ${repeat(statements, r => r.objectId, statementCard)}
 </section>`;
 
