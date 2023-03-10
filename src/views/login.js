@@ -19,7 +19,7 @@ export function loginView(ctx) {
             return alert('All fields are required!')
         };
 
-        await login({ email, password });
+        await login(email, password);
         ctx.page.redirect('/statements');
     }
 } 
