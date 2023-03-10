@@ -7,16 +7,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
-    width: 25vw;
+    width: 30vw;
     border-radius: 1rem;
     margin: 1rem;
     padding: 0 0.75rem;
     background-color: lightcyan;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
-}
-
-.statement-card p{
-    display: inline-block;
 }

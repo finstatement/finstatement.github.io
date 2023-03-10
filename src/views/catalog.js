@@ -18,7 +18,7 @@ const statementCard = (statement) => html`
     <p>${statement.profession}</p>
     <p>${statement.salary}</p>
     <p>${statement.passive}</p>
-    <p><a class="action" href="/statements/${statement.objectId}">View Details</a></p>
+    <p><a class="action" href="/statements/${statement.objectId}"><i class="fa-solid fa-up-right-from-square"></i></a></p>
 </article>`;
 
 export async function catalogView(ctx) {
